@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+// import 'package:intl/intl.dart';
+
+import 'package:flutter_weather/widgets/WeatherItem.dart';
+import 'package:flutter_weather/models/ForecastData.dart';
+
+
+class Forecast extends StatelessWidget {
+  final ForecastData weather;
+
+  Forecast({Key key, @required this.weather}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        const SizedBox(height: 30,),
+        Text('Forecast', style: new TextStyle(color: Colors.yellow, fontSize: 45.0, fontWeight: FontWeight.bold),),
+        const SizedBox(height: 20,),
+        Text('The next few days:', style: new TextStyle(color: Colors.white, fontSize: 15.0, fontWeight: FontWeight.bold,),),
+        const SizedBox(height: 10,),
+        SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 350.0,
+              child: weather != null ? ListView.builder(
+                itemCount: weather.getForecastData.length,
+                scrollDirection: Axis.vertical,
+                itemBuilder: (context, index) => WeatherItem(weather: weather.getForecastData.elementAt(index))
+              ) : Container(),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
