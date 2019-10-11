@@ -1,4 +1,9 @@
+// The main data model, holds the information about the weather.
+// It contains a Factory function that creates data from JSON.
+
 class WeatherData {
+
+  // Member data.
   final DateTime date;
   final String name;
   final double temp;
@@ -10,6 +15,7 @@ class WeatherData {
   final double windSpeed;
   final double windDeg;
 
+  // Custom class getters.
   String get getWeekdayName {
     return {1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday', 7: 'Sunday'}[this.date.weekday];
   }
@@ -18,12 +24,10 @@ class WeatherData {
     return this.temp.toStringAsFixed(1) + '°C';
   }
 
-  String get getTempHiLo {
-    return this.tempMax.toStringAsFixed(1) + '°C - ' + this.tempMin.toStringAsFixed(1) + '°C';
-  }
-
+  // Class constructor.
   WeatherData({this.date, this.name, this.temp, this.tempMin, this.tempMax, this.main, this.description, this.icon, this.windSpeed, this.windDeg});
 
+  // JSON factory constructor.
   factory WeatherData.fromJson(Map<String, dynamic> json) {
     return WeatherData(
       date: new DateTime.fromMillisecondsSinceEpoch(json['dt'] * 1000, isUtc: false),
