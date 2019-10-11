@@ -27,7 +27,7 @@ To run the application you need to have __Flutter__ and __Android Studio__ insta
 ## Goals for this project
 - The user can see the weather information for the current day.
 - The user can see a list of days containing the overall information of the day.
-- The user can select any given day from the list to see more information about it.s
+- The user can select any given day from the list to see more information about it.
 - The data should be cached no more than 12 hours locally but the user can request to refresh it.
 
 ## Project Structure
