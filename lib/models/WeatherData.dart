@@ -10,6 +10,18 @@ class WeatherData {
   final double windSpeed;
   final double windDeg;
 
+  String get getWeekdayName {
+    return {1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday', 7: 'Sunday'}[this.date.weekday];
+  }
+
+  String get getTemp {
+    return this.temp.toStringAsFixed(1);
+  }
+
+  String get getTempHiLo {
+    return this.tempMax.toStringAsFixed(1) + '°C - ' + this.tempMin.toStringAsFixed(1) + '°C';
+  }
+
   WeatherData({this.date, this.name, this.temp, this.tempMin, this.tempMax, this.main, this.description, this.icon, this.windSpeed, this.windDeg});
 
   factory WeatherData.fromJson(Map<String, dynamic> json) {
