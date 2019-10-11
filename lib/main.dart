@@ -49,9 +49,9 @@ class MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         backgroundColor: Colors.indigo,
-        appBar: AppBar(
-          title: Text('Weather App', style: new TextStyle(color: Colors.yellow, fontWeight: FontWeight.bold),),
-        ),
+        // appBar: AppBar(
+        //   title: Text('Weather App', style: new TextStyle(color: Colors.yellow, fontWeight: FontWeight.bold),),
+        // ),
         body: PageView(
           controller: _pageController,
           children: <Widget>[
