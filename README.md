@@ -11,7 +11,7 @@ Besides what comes included when executing `flutter create`, I've added a few mo
 - [__location__](https://pub.dev/packages/location) - Handles getting location on Android and iOS.
 
 ## Usage
-To run the application you need to have __Flutter__ and __Android Studio__ installed. To be able to receive data from the OpenWeatherMap WeatherAPI a API key is required. To get one head on over to [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) and get your free API key.
+To run the application you need to have __Flutter__ and __Android Studio__ installed. To be able to receive data from the OpenWeatherMap WeatherAPI an API key is required. To get one, head on over to [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) and get your free API key.
 
 ### Steps for getting started:
 1. Clone the repository.
