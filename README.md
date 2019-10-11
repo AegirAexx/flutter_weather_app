@@ -2,9 +2,7 @@
 
 A simple front-end weather forecast client. It uses the OpenWeatherMap WeatherAPI to provide data. The client is written in Dart using the Flutter SDK framework.
 
-It was developed for Android 9 and not tested on any iOS device.
-
-__SCREEN SHOTS__
+It was developed for Android 9 and tested on an emulated Pixel XL.
 
 ## Dependencies:
 Besides what comes included when executing `flutter create`, I've added a few more packages from [pub.dev](https://pub.dev/):
@@ -18,8 +16,13 @@ To run the application you need to have __Flutter__ and __Android Studio__ insta
 ### Steps for getting started:
 1. Clone the repository.
 2. Run `flutter pub get` from the command line.
-3. Add the API Key
-
+3. Add your API key to `ApiKey.dart`.
+    ```Dart
+    class ApiKey {
+    static const OPEN_WEATHER_MAP = 'INSERT_YOUR_API_KEY_HERE';
+    }
+    ```
+4. Build and run the App.
 
 ## Goals for this project
 - The user can see the weather information for the current day.
@@ -27,18 +30,18 @@ To run the application you need to have __Flutter__ and __Android Studio__ insta
 - The user can select any given day from the list to see more information about it.s
 - The data should be cached no more than 12 hours locally but the user can request to refresh it.
 
-## Libraries
-HTTP
-+more...
-
 ## Project Structure
-FOLDER STRUCTURE "TREE"
+```
+.
+├── main.dart
+├── models
+│   ├── ApiKey.dart
+│   ├── ForecastData.dart
+│   └── WeatherData.dart
+└── widgets
+    ├── Forecast.dart
+    ├── Search.dart
+    ├── Weather.dart
+    └── WeatherItem.dart
 
-## Model Classes
-WeatherData
-ForecastData
-
-## Screen Widget Classes
-Weather screen
-Forecast screen
-Search screen
+```
