@@ -17,10 +17,9 @@ class Forecast extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         const SizedBox(height: 30,),
-        Text('Forecast', style: new TextStyle(color: Colors.yellow, fontSize: 45.0, fontWeight: FontWeight.bold),),
+        Text(weather.getForecastData[0].name, style: new TextStyle(color: Colors.deepOrange, fontSize: 55.0, fontWeight: FontWeight.bold),),
         const SizedBox(height: 20,),
         Text('The next few days:', style: new TextStyle(color: Colors.white, fontSize: 15.0, fontWeight: FontWeight.bold,),),
-        const SizedBox(height: 10,),
         SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(8.0),

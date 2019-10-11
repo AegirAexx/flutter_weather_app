@@ -15,7 +15,7 @@ class WeatherData {
   }
 
   String get getTemp {
-    return this.temp.toStringAsFixed(1);
+    return this.temp.toStringAsFixed(1) + '°C';
   }
 
   String get getTempHiLo {
